@@ -1,0 +1,42 @@
+decomposition: 'kronecker'
+detach_head: True
+model_name: 'facebook/opt-125m'
+tmp_path: 'path'
+layer_numbers: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11]
+q_proj:
+    r: 3
+    m1: 4
+    n1: 1
+k_proj:
+    r: 3
+    m1: 4
+    n1: 1
+v_proj:
+    r: 1
+    m1: 1
+    n1: 1
+out_proj:
+    r: 3
+    m1: 1
+    n1: 4
+fc1:
+    r: 3
+    m1: 4
+    n1: 1
+fc2:
+    r: 3
+    m1: 1
+    n1: 4
+lm_head:
+    r: 1
+    m1: 768
+    n1: 50272
+embed_tokens:
+    r: 1
+    m1: 50272
+    n1: 768
+embed_positions: 
+    r: 1
+    m1: 2050
+    n1: 768 
+not_replace_layers:

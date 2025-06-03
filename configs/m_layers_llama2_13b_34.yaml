@@ -1,0 +1,87 @@
+detach_head: False
+model_name: 'meta-llama/llama-2-13b-hf'
+tmp_path: 'path/llama2-13b-m-34'
+decomposition: 'monarch'
+layer_numbers: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36, 37, 38, 39, 40, 41]
+q_proj:
+    kl: 4
+    bl1: 1280
+    bl2: 1280
+    kr: 2
+    br1: 2560
+    br2: 2560
+    use_pl: False
+    use_pr: False
+k_proj:
+    kl: 4
+    bl1: 1280
+    bl2: 1280
+    kr: 2
+    br1: 2560
+    br2: 2560
+    use_pl: False
+    use_pr: False
+v_proj:
+    kl: 1
+    bl1: 5120
+    bl2: 5120
+    kr: 5120
+    br1: 1
+    br2: 1
+    use_pl: False
+    use_pr: False
+o_proj:
+    kl: 2
+    bl1: 2560
+    bl2: 2560
+    kr: 4
+    br1: 1280
+    br2: 1280
+    use_pl: False
+    use_pr: False
+gate_proj:
+    kl: 4
+    bl1: 1280
+    bl2: 4412
+    kr: 8
+    br1: 2206
+    br2: 1728
+    use_pl: False
+    use_pr: False
+up_proj:
+    kl: 4
+    bl1: 1280
+    bl2: 4412
+    kr: 8
+    br1: 2206
+    br2: 1728
+    use_pl: False
+    use_pr: False
+down_proj:
+    kl: 8
+    bl1: 1728
+    bl2: 2206
+    kr: 4
+    br1: 4412
+    br2: 1280
+    use_pl: False
+    use_pr: False
+lm_head:
+    kl: 5120
+    bl1: 1
+    bl2: 1
+    kr: 1
+    br1: 5120
+    br2: 32000
+    use_pl: False
+    use_pr: False
+embed_tokens:
+    kl: 1
+    bl1: 32000
+    bl2: 5120
+    kr: 5120
+    br1: 1
+    br2: 1
+    use_pl: False
+    use_pr: False
+not_replace_layers: 

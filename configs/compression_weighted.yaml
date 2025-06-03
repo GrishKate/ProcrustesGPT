@@ -1,0 +1,9 @@
+norm: 'W'        # 'F' for compression in Frobenius norm, 'W' for weighted norm
+als_iters: 1     # number of ALS iterations
+num_samples: 128 # number of samples from calibration dataset
+gd_iters: 500    # number of iterations of gradient descent
+use_cg: True     # if True - use conjugate gradients, otherwise use usual gradient descent
+approx_iters: 1  # number of iterations for approximating with structured factorizations
+test: False      # if True, orthogonal matrices will be random
+n_process: 1
+num_threads: 1

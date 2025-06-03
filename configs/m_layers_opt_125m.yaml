@@ -1,0 +1,87 @@
+detach_head: True
+model_name: 'facebook/opt-125m'
+tmp_path: 'path/opt-125m-m'
+decomposition: 'monarch'
+layer_numbers: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11]
+q_proj:
+    kl: 4
+    bl1: 192
+    bl2: 192
+    kr: 2
+    br1: 384
+    br2: 384
+    use_pl: False
+    use_pr: False
+k_proj:
+    kl: 4
+    bl1: 192
+    bl2: 192
+    kr: 2
+    br1: 384
+    br2: 384
+    use_pl: False
+    use_pr: False
+v_proj:
+    kl: 1
+    bl1: 768
+    bl2: 768
+    kr: 768
+    br1: 1
+    br2: 1
+    use_pl: False
+    use_pr: False
+out_proj:
+    kl: 2
+    bl1: 384
+    bl2: 384
+    kr: 4
+    br1: 192
+    br2: 192
+    use_pl: False
+    use_pr: False
+fc1:
+    kl: 4
+    bl1: 192
+    bl2: 768
+    kr: 8
+    br1: 384
+    br2: 384
+    use_pl: False
+    use_pr: False
+fc2:
+    kl: 8
+    bl1: 384
+    bl2: 384
+    kr: 4
+    br1: 768
+    br2: 192
+    use_pl: False
+    use_pr: False
+lm_head:
+    kl: 4
+    bl1: 192
+    bl2: 144
+    kr: 1
+    br1: 576
+    br2: 50272
+    use_pl: False
+    use_pr: False
+embed_tokens:
+    kl: 1
+    bl1: 50272
+    bl2: 576
+    kr: 4
+    br1: 144
+    br2: 192
+    use_pl: False
+    use_pr: False
+embed_positions: 
+    kl: 1
+    bl1: 2050
+    bl2: 528
+    kr: 4
+    br1: 132
+    br2: 192
+    use_pl: False
+    use_pr: False
+not_replace_layers: 

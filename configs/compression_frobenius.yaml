@@ -1,0 +1,7 @@
+norm: 'F'        # 'F' for compression in Frobenius norm, 'W' for weighted norm
+als_iters: 10    # number of ALS iterations
+num_samples: 128 # number of samples from calibration dataset
+eps: 0.0         # ALS stops when this threshold is achieved
+n_process: 4     # number of processes for running ALS in parallel, should be equal to number of CPUs
+num_threads: 1   # should be 1, see https://docs.pytorch.org/docs/stable/notes/multiprocessing.html
+test: False      # if True, orthogonal matrices will be random
