@@ -21,7 +21,6 @@ def main():
         model_adapter, tokenizer, params_num = None, None, None
     else:
         model_adapter, tokenizer, params_num = get_rotated_adapter(args)
-        model_adapter.model.half()
 
     model_adapter, tokenizer, params_num = init_model(args, model_adapter, tokenizer, params_num)
 
