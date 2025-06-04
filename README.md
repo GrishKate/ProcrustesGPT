@@ -1,6 +1,6 @@
 # ProcrustesGPT: Compressing LLMs with Structured Matrices and Orthogonal Transformations
 
-This repository is the official implementation of our paper "ProcrustesGPT: Compressing LLMs with Structured Matrices and Orthogonal Transformations" by Ekaterina Grishina, Mikhail Gorbunov and Maxim Rakhuba.
+This repository is the official implementation of our paper ["ProcrustesGPT: Compressing LLMs with Structured Matrices and Orthogonal Transformations"](http://arxiv.org/abs/2506.02818) by Ekaterina Grishina, Mikhail Gorbunov and Maxim Rakhuba.
 
 OPT and Llama2 HuggingFace models are supported.
 
