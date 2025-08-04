@@ -133,7 +133,7 @@ def init_head(idx, prev_adapter, model_adapter, dtype, layer_cfg, cfg, Qt_2, Xou
         params_in = [layer_cfg.get_params(-1, 'lm_head', inp_x_out=True)]
     Wout = [prev_adapter.get_mlp_output().weight.data.T]
     name = 'fc2' if 'opt' in layer_cfg.cfg.model_name else 'down_proj'
-    params_out = [layer_cfg.get_params(idx, name, inp_x_out=True)]
+    params_out = [layer_cfg.get_params(idx-1, name, inp_x_out=True)]
     Q0 = prev_adapter.layer.mlp_shortcut_Q.data.to(Qt_2.device, dtype=torch.float32)
     Qt_1, Wout_appr, Win_appr, Q_skip = weighted_procrustes_als(Wout, Xout, Win, Xin, params_out, params_in,
                                                                 cfg, layer_cfg, device, cut_values=False)
